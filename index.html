@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smak i Styl - Catering</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
+    header { background: #f2f2f2; padding: 20px; text-align: center; }
+    nav { background: #d62828; color: #fff; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    h1, h2 { color: #d62828; }
+    .placeholder { background: #eee; width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; color: #aaa; margin: 20px 0; }
+    footer { background: #f2f2f2; text-align: center; padding: 20px; font-size: 0.9em; }
+    img.logo { max-height: 100px; }
+    iframe { width: 100%; height: 300px; border: none; margin-top: 20px; }
+    form { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; }
+    button { padding: 10px; background: #d62828; color: white; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; }
+    button:hover { background: #a91e1e; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Smak i Styl" class="logo">
+</header>
+
+<nav>
+  <a href="#historia">Historia</a>
+  <a href="#oferta">Oferta</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="historia">
+  <h2>Nasza Historia</h2>
+  <p>Firma <strong>Alicja Furtak Smak i Styl</strong> istnieje już od 17 grudnia 2013 roku [...]</p>
+  <img src="historia.jpg" alt="Wydarzenie cateringowe firmy Smak i Styl" style="width:100%; height:auto; margin: 20px 0;">
+</section>
+
+<section id="oferta">
+  <h2>Nasza Oferta</h2>
+  <p>Specjalizujemy się w obsłudze firm oraz zewnętrznych imprez okolicznościowych [...]</p>
+  <img src="oferta.jpg" alt="Przerwa kawowa podczas konferencji" style="width:100%; height:auto; margin: 20px 0;">
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p><strong>Nazwa firmy:</strong> Alicja Furtak SMAK i styl</p>
+  <p><strong>Miejsce działalności:</strong><br>Instytut Teologiczno-Pastoralny, ul. Witolda 11A, 35-302 Rzeszów</p>
+  <p><strong>Telefon:</strong> 601 446 269</p>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
+
+  <form action="mailto:smakistyl.catering@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Imię i nazwisko:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Adres e-mail:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Wiadomość:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <button type="submit">Wyślij wiadomość</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Smak i Styl - Alicja Anna Furtak. Wszelkie prawa zastrzeżone.
+</footer>
+
+</body>
+</html>
