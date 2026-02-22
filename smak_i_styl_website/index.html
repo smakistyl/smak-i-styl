@@ -5,24 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smak i Styl - Catering</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; overflow-x: hidden; }
     header { background: #f2f2f2; padding: 20px; text-align: center; }
-    nav { background: #d62828; color: #fff; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav { background: #d62828; color: #fff; display: flex; justify-content: center; gap: 20px; padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
     nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; box-sizing: border-box; }
     h1, h2 { color: #d62828; }
     footer { background: #f2f2f2; text-align: center; padding: 20px; font-size: 0.9em; }
-    img.logo { max-height: 100px; }
+    
+    /* Poprawka logotypów */
+    img.logo { max-height: 100px; width: auto; }
+    .top-kpo-banner { margin: 15px auto 0; padding-top: 15px; border-top: 1px solid #ccc; max-width: 800px; }
+    .top-kpo-banner img { width: 100%; height: auto; max-width: 600px; display: block; margin: 0 auto; }
+    
+    img.section-img { width: 100%; height: auto; border-radius: 4px; margin: 20px 0; }
+    
     iframe { width: 100%; height: 300px; border: none; margin-top: 20px; }
     form { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
-    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; width: 100%; box-sizing: border-box; }
     button { padding: 10px; background: #d62828; color: white; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; }
     button:hover { background: #a91e1e; }
 
     /* Style dla sekcji KPO */
-    .kpo-section { border-top: 2px solid #f2f2f2; margin-top: 40px; background-color: #fafafa; }
-    .kpo-banner { text-align: center; margin-bottom: 30px; }
-    .kpo-banner img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+    .kpo-section { border-top: 2px solid #f2f2f2; margin-top: 40px; background-color: #fafafa; border-radius: 8px; }
+    .kpo-banner-box { text-align: center; margin-bottom: 30px; }
+    .kpo-banner-box img { width: 100%; height: auto; max-width: 800px; border: 1px solid #ddd; }
     .kpo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
     @media (max-width: 768px) { .kpo-grid { grid-template-columns: 1fr; } }
     .kpo-item h3 { color: #d62828; font-size: 1.1em; border-left: 4px solid #d62828; padding-left: 10px; margin-top: 0; }
@@ -34,16 +41,10 @@
 <header>
   <img src="logo.png" alt="Logo Smak i Styl" class="logo">
   
-  <div style="margin-top: 15px; border-top: 1px solid #ddd; padding-top: 15px;">
-    <img src="strona.png" alt="Logotypy KPO i UE" style="max-width: 100%; height: auto; max-height: 70px;">
+  <div class="top-kpo-banner">
+    <img src="strona.png" alt="Logotypy Krajowy Plan Odbudowy i Unii Europejskiej">
   </div>
 </header>
-
-<nav>
-  <a href="#historia">Historia</a>
-  <a href="#oferta">Oferta</a>
-  <a href="#kontakt">Kontakt</a>
-  <a href="#kpo">Fundusze UE</a>
 
 <nav>
   <a href="#historia">Historia</a>
@@ -55,13 +56,13 @@
 <section id="historia">
   <h2>Nasza Historia</h2>
   <p>Firma <strong>Alicja Furtak Smak i Styl</strong> istnieje już od 17 grudnia 2013 roku. Od samego początku stawiamy na najwyższą jakość produktów oraz pasję w tworzeniu niezapomnianych smaków. Nasze doświadczenie pozwala nam sprostać oczekiwaniom nawet najbardziej wymagających klientów.</p>
-  <img src="historia.jpg" alt="Wydarzenie cateringowe firmy Smak i Styl" style="width:100%; height:auto; margin: 20px 0;">
+  <img src="historia.jpg" alt="Wydarzenie cateringowe firmy Smak i Styl" class="section-img">
 </section>
 
 <section id="oferta">
   <h2>Nasza Oferta</h2>
   <p>Specjalizujemy się w obsłudze firm oraz zewnętrznych imprez okolicznościowych. Zapewniamy kompleksową obsługę cateringową konferencji, szkoleń, bankietów oraz przyjęć rodzinnych. Każde zlecenie traktujemy indywidualnie, dopasowując menu do charakteru wydarzenia.</p>
-  <img src="oferta.jpg" alt="Przerwa kawowa podczas konferencji" style="width:100%; height:auto; margin: 20px 0;">
+  <img src="oferta.jpg" alt="Przerwa kawowa podczas konferencji" class="section-img">
 </section>
 
 <section id="kontakt">
@@ -70,7 +71,7 @@
   <p><strong>Miejsce działalności:</strong><br>Instytut Teologiczno-Pastoralny, ul. Witolda 11A, 35-302 Rzeszów</p>
   <p><strong>Telefon:</strong> 601 446 269</p>
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.146608636183!2d22.01633517688533!3d50.0460983163821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfaf92e920677%3A0x671752b123604f3d!2sWitolda%2011A%2C%2035-302%20Rzesz%C3%B3w!5e0!3m2!1spl!2spl!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.441!2d22.016!3d50.034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfaf..." allowfullscreen="" loading="lazy"></iframe>
 
   <form action="mailto:smakistyl.catering@gmail.com" method="post" enctype="text/plain">
     <label for="name">Imię i nazwisko:</label>
@@ -84,7 +85,7 @@
 </section>
 
 <section id="kpo" class="kpo-section">
-  <div class="kpo-banner">
+  <div class="kpo-banner-box">
     <img src="strona.png" alt="Logotypy Krajowego Planu Odbudowy i Unii Europejskiej">
   </div>
   
@@ -117,10 +118,6 @@
       <p>Wdrożenie innowacyjnych usług cateringowych, dywersyfikacja oferty oraz wzmocnienie odporności firmy na zmiany rynkowe poprzez nowoczesne inwestycje w sektorze HoReCa.</p>
     </div>
   </div>
-
-  <p style="font-size: 0.8em; color: #666; margin-top: 30px; text-align: center;">
-    Informacje są aktualizowane zgodnie z postępem realizacji przedsięwzięcia.
-  </p>
 </section>
 
 <footer>
