@@ -13,20 +13,21 @@
     h1, h2 { color: #d62828; }
     footer { background: #f2f2f2; text-align: center; padding: 20px; font-size: 0.9em; }
     
-    /* Poprawka logotypów */
     img.logo { max-height: 100px; width: auto; }
     .top-kpo-banner { margin: 15px auto 0; padding-top: 15px; border-top: 1px solid #ccc; max-width: 800px; }
     .top-kpo-banner img { width: 100%; height: auto; max-width: 600px; display: block; margin: 0 auto; }
     
     img.section-img { width: 100%; height: auto; border-radius: 4px; margin: 20px 0; }
     
-    iframe { width: 100%; height: 300px; border: none; margin-top: 20px; }
+    /* Naprawiona Mapa Google */
+    .map-container { width: 100%; height: 350px; margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid #ccc; }
+    
     form { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
     input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; width: 100%; box-sizing: border-box; }
     button { padding: 10px; background: #d62828; color: white; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; }
     button:hover { background: #a91e1e; }
 
-    /* Style dla sekcji KPO */
+    /* Sekcja KPO zgodna z Księgą Wizualizacji */
     .kpo-section { border-top: 2px solid #f2f2f2; margin-top: 40px; background-color: #fafafa; border-radius: 8px; }
     .kpo-banner-box { text-align: center; margin-bottom: 30px; }
     .kpo-banner-box img { width: 100%; height: auto; max-width: 800px; border: 1px solid #ddd; }
@@ -40,9 +41,8 @@
 
 <header>
   <img src="logo.png" alt="Logo Smak i Styl" class="logo">
-  
   <div class="top-kpo-banner">
-    <img src="strona.png" alt="Logotypy Krajowy Plan Odbudowy i Unii Europejskiej">
+    <img src="strona.png" alt="Logotypy Krajowy Plan Odbudowy, Rzeczpospolita Polska, Unia Europejska NextGenerationEU">
   </div>
 </header>
 
@@ -71,16 +71,18 @@
   <p><strong>Miejsce działalności:</strong><br>Instytut Teologiczno-Pastoralny, ul. Witolda 11A, 35-302 Rzeszów</p>
   <p><strong>Telefon:</strong> 601 446 269</p>
 
-  <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.535805541733!2d22.0135891770146!3d50.03881331707548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfaf9278a9c3b%3A0xc682245b78082590!2sInstytut%20Teologiczno-Pastoralny%20im.%20św.%20Józefa%20Sebastiana%20Pelczara!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl" 
-  width="100%" 
-  height="300" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-  
+  <div class="map-container">
+    <iframe 
+      src="http://googleusercontent.com/maps.google.com/8" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
   <form action="mailto:smakistyl.catering@gmail.com" method="post" enctype="text/plain">
     <label for="name">Imię i nazwisko:</label>
     <input type="text" id="name" name="name" required>
@@ -94,38 +96,42 @@
 
 <section id="kpo" class="kpo-section">
   <div class="kpo-banner-box">
-    <img src="strona.png" alt="Logotypy Krajowego Planu Odbudowy i Unii Europejskiej">
+    <img src="strona.png" alt="Zestawienie znaków KPO, RP i NGEU">
   </div>
   
   <h2>Krajowy Plan Odbudowy</h2>
   <p style="font-size: 1.1em; margin-bottom: 30px;">
-    Realizujemy przedsięwzięcie wspierane przez Unię Europejską w ramach programu <strong>NextGenerationEU</strong>.
+    Realizujemy przedsięwzięcie wspierane przez Unię Europejską w ramach programu <strong>NextGenerationEU</strong>[cite: 7].
   </p>
 
   <div class="kpo-grid">
     <div class="kpo-item">
-      <h3>Tytuł i cel projektu</h3>
+      <h3>Cel i zadania projektu [cite: 569]</h3>
       <p><strong>Numer wniosku:</strong> KPOD.01.03.IW.01.0199/24</p>
-      <p><strong>Tytuł projektu:</strong> Rozwój cateringu zewnętrznego w branży gastronomicznej – innowacyjne świadczenie usług cateringowych dla biznesu i osób prywatnych.</p>
-      <p>Projekt realizowany jest w ramach inwestycji A1.2.1 KPO: „Nowe inwestycje w sektorze HoReCa – wsparcie dla mikro, małych i średnich przedsiębiorstw”.</p>
+      <p><strong>Tytuł:</strong> Rozwój cateringu zewnętrznego w branży gastronomicznej – innowacyjne świadczenie usług cateringowych dla biznesu i osób prywatnych.</p>
+      <p>Celem projektu jest inwestycja w sektor HoReCa (A1.2.1 KPO), co pozwoli na unowocześnienie usług cateringowych i dywersyfikację oferty firmy.</p>
     </div>
 
     <div class="kpo-item">
-      <h3>Grupy docelowe</h3>
-      <p>Przedsięwzięcie skierowane jest do klientów z sektora biznesowego oraz osób prywatnych z Regionu 3, obejmującego województwa: małopolskie, lubelskie, podkarpackie oraz świętokrzyskie.</p>
+      <h3>Grupy docelowe [cite: 570]</h3>
+      <p>Przedsięwzięcie skierowane jest do klientów z sektora MŚP oraz osób prywatnych z Regionu 3, obejmującego województwa: podkarpackie, małopolskie, lubelskie i świętokrzyskie.</p>
     </div>
 
     <div class="kpo-item">
-      <h3>Koszt przedsięwzięcia</h3>
+      <h3>Koszt przedsięwzięcia [cite: 571]</h3>
       <p><strong>Wartość projektu:</strong> 181 982,00 PLN</p>
       <p><strong>Wartość dofinansowania z UE:</strong> 163 783,90 PLN</p>
     </div>
 
     <div class="kpo-item">
-      <h3>Efekty i korzyści</h3>
-      <p>Wdrożenie innowacyjnych usług cateringowych, dywersyfikacja oferty oraz wzmocnienie odporności firmy na zmiany rynkowe poprzez nowoczesne inwestycje w sektorze HoReCa.</p>
+      <h3>Efekty i korzyści [cite: 573]</h3>
+      <p>Wdrożenie innowacyjnych technologii gastronomicznych, poprawa jakości świadczonych usług cateringowych oraz wzmocnienie odporności firmy na zmiany rynkowe.</p>
     </div>
   </div>
+
+  <p style="font-size: 0.8em; color: #666; margin-top: 30px; text-align: center;">
+    Informacje są aktualizowane zgodnie z postępem realizacji przedsięwzięcia[cite: 573].
+  </p>
 </section>
 
 <footer>
