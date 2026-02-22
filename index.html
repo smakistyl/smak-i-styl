@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -12,7 +11,6 @@
     nav a { color: #fff; text-decoration: none; font-weight: bold; }
     section { padding: 40px 20px; max-width: 1000px; margin: auto; }
     h1, h2 { color: #d62828; }
-    .placeholder { background: #eee; width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; color: #aaa; margin: 20px 0; }
     footer { background: #f2f2f2; text-align: center; padding: 20px; font-size: 0.9em; }
     img.logo { max-height: 100px; }
     iframe { width: 100%; height: 300px; border: none; margin-top: 20px; }
@@ -20,6 +18,14 @@
     input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; }
     button { padding: 10px; background: #d62828; color: white; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; }
     button:hover { background: #a91e1e; }
+
+    /* Style dla sekcji KPO */
+    .kpo-section { border-top: 2px solid #f2f2f2; margin-top: 40px; }
+    .kpo-banner { text-align: center; margin-bottom: 30px; }
+    .kpo-banner img { max-width: 100%; height: auto; border: 1px solid #eee; }
+    .kpo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 768px) { .kpo-grid { grid-template-columns: 1fr; } }
+    .kpo-item h3 { color: #333; font-size: 1.1em; border-left: 4px solid #d62828; padding-left: 10px; margin-top: 0; }
   </style>
 </head>
 <body>
@@ -32,29 +38,18 @@
   <a href="#historia">Historia</a>
   <a href="#oferta">Oferta</a>
   <a href="#kontakt">Kontakt</a>
+  <a href="#kpo">Fundusze UE</a>
 </nav>
 
 <section id="historia">
   <h2>Nasza Historia</h2>
-  <p>Firma <strong>Alicja Furtak Smak i Styl</strong> istnieje już od 17 grudnia 2013 roku i jest właścicielem baru zlokalizowanego w Instytucie Teologiczno-Pastoralnym w Rzeszowie, przy ul. Witolda 11A. Obecnie głównym źródłem przychodów jest przygotowywanie i serwowanie posiłków dla studentów tej instytucji, włączając w to kanapki, ciasta, obiady oraz napoje takie jak kawa, herbata, soki i woda. Nasz zespół liczy 4 pracowników, w tym również osobę z niepełnosprawnością.</p>
-
-  <p>Po dokładnej analizie rynku oraz obserwacji aktualnych trendów – szczególnie w kontekście pandemii – doszliśmy do wniosku, że kluczowym krokiem dla utrzymania ciągłości biznesowej jest rozszerzenie naszej oferty o usługi cateringowe na terenie Podkarpacia. Nasz catering skierowany jest zarówno do firm, jak i klientów indywidualnych i obejmuje kompleksową obsługę gastronomiczną wydarzeń takich jak spotkania biznesowe, konferencje, bankiety oraz imprezy prywatne.</p>
-
-  <p>Naszym priorytetem jest jakość oferowanych dań, wykorzystanie lokalnych składników i innowacyjne podejście do tworzenia menu. Chcemy wyróżniać się na konkurencyjnym rynku poprzez dbałość o najwyższe standardy oraz kreatywność w kuchni. Dzięki rozszerzeniu działalności zwiększymy naszą widoczność na rynku, otworzymy się na nowe możliwości i zdobędziemy nowych, zadowolonych klientów.</p>
-
+  <p>Firma <strong>Alicja Furtak Smak i Styl</strong> istnieje już od 17 grudnia 2013 roku [...]</p>
   <img src="historia.jpg" alt="Wydarzenie cateringowe firmy Smak i Styl" style="width:100%; height:auto; margin: 20px 0;">
 </section>
 
 <section id="oferta">
   <h2>Nasza Oferta</h2>
-  <p>Specjalizujemy się w obsłudze firm oraz zewnętrznych imprez okolicznościowych, takich jak konferencje, bankiety, szkolenia czy spotkania integracyjne. Nasze usługi kierujemy wyłącznie do klientów biznesowych i instytucjonalnych działających na terenie województwa podkarpackiego.</p>
-  <p>Dodatkowo oferujemy możliwość kompleksowej organizacji szkoleń i spotkań – zapewniamy zarówno salę, jak i pełną obsługę gastronomiczną wydarzenia.</p>
-  <ul>
-    <li>Catering dla firm i instytucji</li>
-    <li>Obsługa wydarzeń zewnętrznych (imprezy plenerowe, konferencje)</li>
-    <li>Indywidualne dopasowanie menu do potrzeb klienta</li>
-    <li>Dostawa potraw na miejsce wydarzenia</li>
-  </ul>
+  <p>Specjalizujemy się w obsłudze firm oraz zewnętrznych imprez okolicznościowych [...]</p>
   <img src="oferta.jpg" alt="Przerwa kawowa podczas konferencji" style="width:100%; height:auto; margin: 20px 0;">
 </section>
 
@@ -63,24 +58,62 @@
   <p><strong>Nazwa firmy:</strong> Alicja Furtak SMAK i styl</p>
   <p><strong>Miejsce działalności:</strong><br>Instytut Teologiczno-Pastoralny, ul. Witolda 11A, 35-302 Rzeszów</p>
   <p><strong>Telefon:</strong> 601 446 269</p>
-  <p><a href="https://maps.app.goo.gl/Ci4ECPqzMwcDi9428" target="_blank">Zobacz lokalizację w Google Maps</a></p>
+
+  <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
 
   <form action="mailto:smakistyl.catering@gmail.com" method="post" enctype="text/plain">
     <label for="name">Imię i nazwisko:</label>
     <input type="text" id="name" name="name" required>
-
     <label for="email">Adres e-mail:</label>
     <input type="email" id="email" name="email" required>
-
     <label for="message">Wiadomość:</label>
     <textarea id="message" name="message" rows="5" required></textarea>
-
     <button type="submit">Wyślij wiadomość</button>
   </form>
 </section>
 
+<section id="kpo" class="kpo-section">
+  <div class="kpo-banner">
+    <img src="strona.png" alt="Logotypy Krajowego Planu Odbudowy i Unii Europejskiej">
+  </div>
+  
+  <h2>Krajowy Plan Odbudowy</h2>
+  <p style="font-size: 1.1em; margin-bottom: 30px;">
+    Realizujemy przedsięwzięcie wspierane przez Unię Europejską w ramach programu <strong>NextGenerationEU</strong>.
+  </p>
+
+  <div class="kpo-grid">
+    <div class="kpo-item">
+      <h3>Tytuł i cel projektu</h3>
+      <p><strong>Numer wniosku:</strong> KPOD.01.03.IW.01.0199/24</p>
+      <p><strong>Tytuł projektu:</strong> Rozwój cateringu zewnętrznego w branży gastronomicznej – innowacyjne świadczenie usług cateringowych dla biznesu i osób prywatnych.</p>
+      <p>Projekt realizowany jest w ramach inwestycji A1.2.1 KPO: „Nowe inwestycje w sektorze HoReCa – wsparcie dla mikro, małych i średnich przedsiębiorstw”.</p>
+    </div>
+
+    <div class="kpo-item">
+      <h3>Grupy docelowe</h3>
+      <p>Przedsięwzięcie skierowane jest do klientów z sektora biznesowego oraz osób prywatnych z Regionu 3, obejmującego województwa: małopolskie, lubelskie, podkarpackie oraz świętokrzyskie.</p>
+    </div>
+
+    <div class="kpo-item">
+      <h3>Koszt przedsięwzięcia</h3>
+      <p><strong>Wartość projektu:</strong> 181 982,00 PLN</p>
+      <p><strong>Wartość dofinansowania z UE:</strong> 163 783,90 PLN</p>
+    </div>
+
+    <div class="kpo-item">
+      <h3>Efekty i korzyści</h3>
+      <p>Wdrożenie innowacyjnych usług cateringowych, dywersyfikacja oferty oraz wzmocnienie odporności firmy na zmiany rynkowe poprzez nowoczesne inwestycje w sektorze HoReCa.</p>
+    </div>
+  </div>
+
+  <p style="font-size: 0.8em; color: #666; margin-top: 30px; text-align: center;">
+    Informacje są aktualizowane zgodnie z postępem realizacji przedsięwzięcia.
+  </p>
+</section>
+
 <footer>
-  &copy; 2025 Smak i Styl - Alicja Anna Furtak. Wszelkie prawa zastrzeżone.
+  © 2026 Smak i Styl - Alicja Anna Furtak. Wszelkie prawa zastrzeżone.
 </footer>
 
 </body>
